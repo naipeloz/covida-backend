@@ -10,6 +10,7 @@ var logger = require('morgan')
 var mainRouter = require('./src/routes/index')
 var zoneRouter = require('./src/routes/zone')
 var sectionRouter = require('./src/routes/section')
+var categoryRouter = require('./src/routes/category')
 
 var dbUrl = process.env.MONGODB_URI
 
@@ -38,6 +39,7 @@ mongoose.connect(
 app.use('/', mainRouter)
 app.use('/zone', zoneRouter)
 app.use('/section', sectionRouter)
+app.use('/category', categoryRouter)
 
 module.exports = app
 
