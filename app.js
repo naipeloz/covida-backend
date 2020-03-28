@@ -11,6 +11,7 @@ var mainRouter = require('./src/routes/index')
 var zoneRouter = require('./src/routes/zone')
 var sectionRouter = require('./src/routes/section')
 var categoryRouter = require('./src/routes/category')
+var projectRouter = require('./src/routes/project')
 
 var dbUrl = process.env.MONGODB_URI
 
@@ -40,6 +41,7 @@ app.use('/', mainRouter)
 app.use('/zone', zoneRouter)
 app.use('/section', sectionRouter)
 app.use('/category', categoryRouter)
+app.use('/project', projectRouter)
 
 module.exports = app
 
