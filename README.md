@@ -1,5 +1,7 @@
 # Covida backend
 
+https://covida-backend.herokuapp.com/zone 
+
 # API
 ## Zonas
 Barrios o departamentos de Uruguay
