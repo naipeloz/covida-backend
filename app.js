@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 
 var mainRouter = require('./src/routes/index')
+var zoneRouter = require('./src/routes/zone')
 
 var dbUrl = process.env.MONGODB_URI
 
@@ -34,6 +35,7 @@ mongoose.connect(
 )
 
 app.use('/', mainRouter)
+app.use('/zone', zoneRouter)
 
 module.exports = app
 
