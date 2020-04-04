@@ -75,7 +75,7 @@ Iniciativas, fundaciones, entidades gubernamentales que esten ofreciendo ayuda
 }
 ```
 - /project {get} : Traer todos los proyectos
-- /project/ {post} : Crear un proyecto
+- /project/create {post} : Crear un proyecto
 - /project/category/:id {post} : Filtrar proyectos por categorias
 
 ### .env

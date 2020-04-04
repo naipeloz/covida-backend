@@ -17,6 +17,17 @@ let ProjectController = {
             res.json(newRow)
         })
     },
+    createAll: (req, res) => {
+        var projectArray = req.body.projects;
+        projectArray.forEach(function(value, array) {
+            let data = new Project(value)
+            data.save((err, newRow) => {
+                if (err)
+                  res.send(err)
+            })
+        });
+        res.status(200).end();
+    },
     getByCategoryId: (req,res) => {
         Project.find({ category: req.params.id } )
             .populate(['category',]).exec((err, projects) => {
