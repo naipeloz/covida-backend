@@ -76,6 +76,7 @@ Iniciativas, fundaciones, entidades gubernamentales que esten ofreciendo ayuda
 ```
 - /project {get} : Traer todos los proyectos
 - /project/create {post} : Crear un proyecto
+- /project/createAll/ {post} : Crear varios proyectos a la vez, el input debe ser un json con un array de proyectos dentro de "project"
 - /project/category/:id {post} : Filtrar proyectos por categorias
 
 ### .env
