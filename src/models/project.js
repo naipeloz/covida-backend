@@ -16,6 +16,10 @@ const schema = new Schema ({
     email: {
         type: String
     },
+    isVerified: {
+        type: Boolean,
+        default: false
+    },
     zone: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Zone'
