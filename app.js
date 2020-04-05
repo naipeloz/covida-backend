@@ -6,6 +6,8 @@ var path = require('path')
 var cors = require('cors');
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
+const jwt = require('express-jwt');
+const jwksRsa = require('jwks-rsa');
 
 var mainRouter = require('./src/routes/index')
 var zoneRouter = require('./src/routes/zone')
@@ -37,6 +39,22 @@ mongoose.connect(
     }
 )
 
+//JWT config
+const checkJwt = jwt({
+    secret: jwksRsa.expressJwtSecret({
+      cache: true,
+      rateLimit: true,
+      jwksRequestsPerMinute: 5,
+      jwksUri: `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`
+    }),
+  
+    // Validate the audience and the issuer.
+    audience: process.env.API_IDENTIFIER,
+    issuer: `https://${process.env.AUTH0_DOMAIN}/`,
+    algorithms: ['RS256']
+});
+
+app.use(checkJwt)
 app.use('/', mainRouter)
 app.use('/zone', zoneRouter)
 app.use('/section', sectionRouter)

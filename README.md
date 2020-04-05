@@ -83,6 +83,8 @@ Iniciativas, fundaciones, entidades gubernamentales que esten ofreciendo ayuda
 ```
 ENV = 
 MONGODB_URI = 
+AUTH0_DOMAIN =
+API_IDENTIFIER =
 ```
 ### Installation
 ```sh
