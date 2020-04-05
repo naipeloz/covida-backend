@@ -13,4 +13,8 @@ router.post('/create', function(req, res, next) {
     ProjectController.create(req, res);
 });
 
+router.post('/createAll', function(req, res, next) {
+    ProjectController.createAll(req, res);
+});
+
 module.exports = router;
