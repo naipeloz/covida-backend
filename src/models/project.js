@@ -16,6 +16,18 @@ const schema = new Schema ({
     email: {
         type: String
     },
+    coordinates: {
+        type: String
+    },
+    image: {
+        type: String
+    },
+    daysService: {
+        type: String
+    },
+    schedule: {
+        type: String
+    },
     isVerified: {
         type: Boolean,
         default: false
@@ -24,10 +36,10 @@ const schema = new Schema ({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Zone'
     },
-    category: {
+    category: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category'
-    },
+    }],
 })
 
 const Project = mongoose.model('Project', schema);
