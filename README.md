@@ -23,6 +23,14 @@ También llamados segmentos, inicialmente se contemplan 3 (Personas vulnerables,
     name: {
         type: String,
         required: true
+    },
+    icon: {
+        type: String,
+        required: true
+    },
+    color: {
+        type: String,
+        required: true
     }
 }
 ```
@@ -36,6 +44,9 @@ Filtros disponibles para las iniciativas creadas en las diferentes secciones
     name: {
         type: String,
         required: true
+    },
+    color: {
+        type: String
     },
     section: {
         type: ObjectId,

@@ -7,6 +7,9 @@ const schema = new Schema ({
         type: String,
         required: true
     },
+    color: {
+        type: String
+    },
     section: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Section'
