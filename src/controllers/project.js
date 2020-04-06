@@ -24,7 +24,6 @@ let ProjectController = {
                 category: req.params.category
             }
         }
-        console.log("filters: ", filters)
         Project.find(filters)
             .populate(['category',]).exec((err, projects) => {
                 if(err)
