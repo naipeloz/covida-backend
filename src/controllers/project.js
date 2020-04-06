@@ -10,6 +10,28 @@ let ProjectController = {
             res.json(projects)
         })
     },
+    getFiltered: (req, res) => {
+        let filters = {};
+        if(req.params.zone !== 'null'){
+            filters = {
+                ...filters,
+                zone: req.params.zone
+            }
+        }
+        if(req.params.category !== 'null'){
+            filters = {
+                ...filters,
+                category: req.params.category
+            }
+        }
+        console.log("filters: ", filters)
+        Project.find(filters)
+            .populate(['category',]).exec((err, projects) => {
+                if(err)
+                    res.send(err)
+                res.json(projects)
+            })
+    },
     create: (req, res) => {
         let data = new Project(req.body)
         data.save((err, newRow) => {

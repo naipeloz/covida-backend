@@ -8,10 +8,13 @@ var upload = multer({dest : 'uploads'});
 router.get('/', function(req, res, next) {
     ProjectController.getAll(req, res);
 });
+router.get('/filter/:zone/:category', function(req, res, next) {
+    ProjectController.getFiltered(req, res);
+})
+
 router.get('/category/:id', function(req, res, next) {
     ProjectController.getByCategoryId(req, res);
 });
-
 router.post('/create', function(req, res, next) {
     ProjectController.create(req, res);
 });
