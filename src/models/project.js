@@ -10,13 +10,37 @@ const schema = new Schema ({
     description: {
         type: String
     },
+    waysHelp: {
+        type: String
+    },
     phone: {
+        type: String
+    },
+    whatsapp: {
+        type: String
+    },
+    facebook: {
+        type: String
+    },
+    instagram: {
+        type: String
+    },
+    twitter: {
+        type: String
+    },
+    other: {
         type: String
     },
     email: {
         type: String
     },
     coordinates: {
+        type: String
+    },
+    referenceAddress: {
+        type: String
+    },
+    website: {
         type: String
     },
     image: {
@@ -27,6 +51,22 @@ const schema = new Schema ({
     },
     schedule: {
         type: String
+    },
+    keywords: [{
+        type: String
+    }],
+    nameResponsable: {
+        type: String
+    },
+    phoneResponsable: {
+        type: String
+    },
+    emailResponsable: {
+        type: String
+    },
+    belongsProject: {
+        type: Boolean,
+        default: false
     },
     isVerified: {
         type: Boolean,
