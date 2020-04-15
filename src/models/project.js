@@ -12,7 +12,7 @@ const schema = new Schema ({
     },
     address: {
         type: String
-    }
+    },
     waysHelp: {
         type: String
     },
