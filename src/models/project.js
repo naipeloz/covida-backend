@@ -10,6 +10,9 @@ const schema = new Schema ({
     description: {
         type: String
     },
+    address: {
+        type: String
+    }
     waysHelp: {
         type: String
     },
