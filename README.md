@@ -56,7 +56,7 @@ Filtros disponibles para las iniciativas creadas en las diferentes secciones
 ```
 - /category {get} : Traer todas las categorias
 - /category/ {post} : Crear una categoria 
-- /category/zone/:id {post} : Filtrar categorias por zona 
+- /category/section/:id {post} : Filtrar categorias por secciones 
 
 ## Proyectos
 Iniciativas, fundaciones, entidades gubernamentales que esten ofreciendo ayuda
