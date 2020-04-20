@@ -75,6 +75,14 @@ const schema = new Schema ({
         type: Boolean,
         default: false
     },
+    wantsHelp: {
+        type: Boolean,
+        default: false
+    },
+    needsHelp: {
+        type: Boolean,
+        default: true
+    },
     zone: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Zone'
