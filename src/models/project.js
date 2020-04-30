@@ -83,10 +83,10 @@ const schema = new Schema ({
         type: Boolean,
         default: true
     },
-    zone: {
+    zone: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Zone'
-    },
+    }],
     category: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category'
