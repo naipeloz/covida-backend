@@ -75,7 +75,7 @@ const schema = new Schema ({
         type: Boolean,
         default: false
     },
-    wantsHelp: {
+    wantsToHelp: {
         type: Boolean,
         default: false
     },
