@@ -49,8 +49,20 @@ Filtros disponibles para las iniciativas creadas en las diferentes secciones
         type: String
     },
     section: {
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Section'
+    },
+    isVisible: {
+        type: Boolean,
+        default: true
+    },
+    wantsToHelp: {
+        type: Boolean,
+        default: false
+    },
+    needsHelp: {
+        type: Boolean,
+        default: true
     },
 }
 ```
@@ -67,6 +79,9 @@ Iniciativas, fundaciones, entidades gubernamentales que esten ofreciendo ayuda
         required: true
     },
     description: {
+        type: String
+    },
+    address: {
         type: String
     },
     waysHelp: {
@@ -131,6 +146,14 @@ Iniciativas, fundaciones, entidades gubernamentales que esten ofreciendo ayuda
         type: Boolean,
         default: false
     },
+    wantsToHelp: {
+        type: Boolean,
+        default: false
+    },
+    needsHelp: {
+        type: Boolean,
+        default: true
+    },
     zone: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Zone'
@@ -138,7 +161,7 @@ Iniciativas, fundaciones, entidades gubernamentales que esten ofreciendo ayuda
     category: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category'
-    }]
+    }],
 }
 ```
 - /project {get} : Traer todos los proyectos
